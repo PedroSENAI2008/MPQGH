@@ -1,0 +1,29 @@
+*{
+    margin:0 auto;
+    padding:0 ;
+    font-family: 'Segoe UI';
+    font-size: clamp(1.2rem, 1vw, 4rem);
+    
+}
+
+body{
+    margin:0 auto;
+    padding:0;
+    background-color: rgba(255, 255, 255, 0.418);
+}
+
+form{
+    margin: 20px auto ;
+    padding:5% 10%;
+
+    background-color: rgb(255, 255, 255);
+    height: 30vh;
+    width: clamp(30vw, 60%, 50vw);
+    box-shadow: 10px 10px 30px rgb(158, 157, 157);
+    border-radius: 10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
