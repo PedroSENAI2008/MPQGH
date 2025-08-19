@@ -5,7 +5,6 @@
     
     
 }
-
 body{
     margin:0 auto;
     padding:0;
@@ -13,19 +12,24 @@ body{
 }
 .help{
     max-width: 10vw;
+    transform: rotate(-20deg);
     position: absolute;
 top: 3vh ;
 left: 10vw}
 #helpmsg{
     position: absolute;
-    top: 3vh;
-    left: 19vw;
-  font-size: clamp(0.6rem, 1vw, 2rem);;
+    top: 2vh;
+    left: 17vw;
+  font-size: clamp(0.6rem, 1vw, 2rem);
+  border-radius: 5px ;
+  background-color: rgb(248, 255, 197);
+  box-shadow: 10px 10px 30px rgb(158, 157, 157);
+  font-weight: 300;
 }
 h1{
     font-size: clamp(1.2rem, 1vw, 4rem);
 }
-form{
+.forms{
     margin: 20px auto ;
     padding:5% 10%;
 
@@ -40,9 +44,44 @@ form{
     justify-content: flex-start;
 
 }
-input[type="radio"] {
+
+.multi{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin:0 auto;
+    padding:0;
+}
+.multi label{
+    margin:auto;
+    color:white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    padding:1vh;
+    max-height:30vh;
+    max-width: 30vw;
+    background-color: rgb(136, 128, 123);
+    
+}
+
+.multi input[type="radio"] {
+  
  accent-color: rgb(140, 164, 140);
  height:3vh;
  width:3vw;
 }
 
+@media (max-width: 768px) { /* até 768px de largura (tablet/celular) */
+  .multi {
+    flex-direction: column; /* empilha em coluna */
+    align-items: center;   /* faz os labels ocuparem largura toda */
+  }
+
+  .multi label {
+    margin: 2vh;           
+    max-width: 50vw;       /* não limita a largura */
+    width: 20vw;           /* ocupa toda a linha */
+    justify-content: flex-start; /* organiza conteúdo à esquerda */
+  }
+}
