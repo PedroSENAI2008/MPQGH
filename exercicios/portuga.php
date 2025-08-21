@@ -1,0 +1,25 @@
+<?php
+
+class Portugues {
+
+    public function Resposta4($resposta){
+
+        if($resposta == "c"){
+        echo "Certa resposta";
+        }else{
+            echo "Resposta incorreta";
+        }
+    }
+}
+$geral = new Portugues();
+
+if($_SERVER['REQUEST_METHOD'] === "POST"){
+
+$resposta4 = $_POST["q4"];
+
+    $geral->Resposta4($resposta4);
+}
+
+
+
+?>
