@@ -5,7 +5,8 @@ class Portugues {
     public function Resposta4($resposta){
 
         if($resposta == "c"){
-        echo "Certa resposta";
+        header("Location:quimica.html");
+            exit; 
         }else{
             echo "Resposta incorreta";
         }

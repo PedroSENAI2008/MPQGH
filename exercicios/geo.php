@@ -5,7 +5,8 @@ class Geo {
     public function Resposta3($resposta){
 
         if($resposta == "km3"){
-        echo "Certa resposta";
+            header("Location:historia.html");
+            exit; 
         }else{
             echo "Resposta incorreta";
         }

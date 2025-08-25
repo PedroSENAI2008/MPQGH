@@ -5,7 +5,8 @@ class Quimica {
     public function Resposta5($resposta){
 
         if($resposta == "h4"){
-        echo "Certa resposta";
+       header("Location:geo.html");
+            exit; 
         }else{
             echo "Resposta incorreta";
         }

@@ -5,7 +5,8 @@ class Matematica {
     public function Resposta2($resposta){
 
         if($resposta == 48){
-        echo "Certa resposta";
+         header("Location:portuga.html");
+            exit; 
         }else{
             echo "Resposta incorreta";
         }
