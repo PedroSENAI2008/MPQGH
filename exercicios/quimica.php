@@ -4,7 +4,15 @@ class Quimica {
 
     public function Resposta5($resposta){
 
+        session_start();
+
+        // Inicia pontuação e tentativas se ainda não existir
+        if (!isset($_SESSION['pontos'])) {
+            $_SESSION['pontos'] = 0;
+        }
+
         if($resposta == "h4"){
+            $_SESSION['pontos'] += 10;
         echo "Certa resposta";
         }else{
             echo "Resposta incorreta";

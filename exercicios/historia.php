@@ -3,8 +3,15 @@
 class Historia {
 
     public function Resposta1($resposta){
+        session_start();
+
+        // Inicia pontuação e tentativas se ainda não existir
+        if (!isset($_SESSION['pontos'])) {
+            $_SESSION['pontos'] = 0;
+        }
 
         if($resposta == "vc"){
+             $_SESSION['pontos'] += 10;
         echo "Certa resposta";
         }else{
             echo "Resposta incorreta";
