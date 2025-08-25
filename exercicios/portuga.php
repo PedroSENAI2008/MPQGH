@@ -13,7 +13,8 @@ class Portugues {
 
         if($resposta == "c"){
             $_SESSION['pontos'] += 10;
-        echo "Certa resposta";
+        header("Location:quimica.html");
+            exit; 
         }else{
             echo "Resposta incorreta";
         }

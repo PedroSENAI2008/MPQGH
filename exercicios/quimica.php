@@ -13,7 +13,8 @@ class Quimica {
 
         if($resposta == "h4"){
             $_SESSION['pontos'] += 10;
-        echo "Certa resposta";
+       header("Location:geo.html");
+            exit; 
         }else{
             echo "Resposta incorreta";
         }

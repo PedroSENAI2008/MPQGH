@@ -4,9 +4,12 @@
     font-family: 'Segoe UI';
     font-weight: 500;
 }
-
+.tspace{
+;
+}
 .trail{
     margin:0 auto;
+    position: absolute;
     padding:0;
     max-width:18vw;
     height:4vw;

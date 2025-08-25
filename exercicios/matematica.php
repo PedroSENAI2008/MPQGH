@@ -16,7 +16,8 @@ class Matematica
 
         if ($resposta == 48) {
             $_SESSION['pontos'] += 10;
-            echo "Certa resposta";
+             header("Location:portuga.html");
+            exit; 
         } else {
             echo "Resposta incorreta";
         }
