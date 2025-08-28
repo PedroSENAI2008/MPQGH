@@ -13,7 +13,7 @@ class Portugues {
 
         if($resposta == "c"){
             $_SESSION['pontos'] += 10;
-        header("Location:quimica.html");
+        header("Location:../trail3.html");
             exit; 
         }else{
             echo "Resposta incorreta";

@@ -12,7 +12,7 @@ class Geo {
 
         if($resposta == "km3"){
              $_SESSION['pontos'] += 10;
-            header("Location:historia.html");
+            header("Location:../trail5.html");
             exit; 
         }else{
             echo "Resposta incorreta";

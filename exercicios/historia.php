@@ -12,7 +12,8 @@ class Historia {
 
         if($resposta == "vc"){
              $_SESSION['pontos'] += 10;
-        echo "Certa resposta";
+        header("Location:fim.php");
+            exit; 
         }else{
             echo "Resposta incorreta";
         }

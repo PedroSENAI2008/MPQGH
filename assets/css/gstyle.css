@@ -11,6 +11,7 @@ body{
     background-color: rgba(204, 198, 185, 0.658);
 }
 .back{
+  
     margin:1vh;
     top:0;
     left:0;
@@ -24,6 +25,8 @@ body{
     border-radius: 10px;
     box-shadow: 10px 30px 10px  box-shadow: 10px 10px 30px rgb(158, 157, 157);
 }
+color: white;
+  text-decoration: none;
 .help{
     max-width: 10vw;
     transform: rotate(-20deg);

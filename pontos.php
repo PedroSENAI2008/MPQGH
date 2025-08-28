@@ -1,7 +1,10 @@
 <?php
-Public class pontos{
-    $pontos =0
-   if (isset($_SESSION['pontos'])) {
+<?php
+class Pontos {
+    private $pontos = 0;
+
+    public function __construct() {
+        if (isset($_SESSION['pontos'])) {
             $this->pontos = $_SESSION['pontos'];
         }
     }
@@ -10,12 +13,5 @@ Public class pontos{
         $this->pontos += $valor;
         $_SESSION['pontos'] = $this->pontos; // salva na sessão
     }
-
-
-
-
-
-
-
-
+}
 ?>
