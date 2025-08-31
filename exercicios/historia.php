@@ -1,4 +1,5 @@
 <?php
+require_once 'error_handler.php';
 
 class Historia {
 
@@ -12,10 +13,9 @@ class Historia {
 
         if($resposta == "vc"){
              $_SESSION['pontos'] += 10;
-        header("Location:fim.php");
-            exit; 
+             ErrorHandler::redirectToNext("fim.php");
         }else{
-            echo "Resposta incorreta";
+            ErrorHandler::showError("Resposta incorreta! Revise os fatos históricos sobre a chegada de Pedro Álvares Cabral.", "historia.html", "Tentar novamente");
         }
     }
 }

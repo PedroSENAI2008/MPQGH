@@ -1,4 +1,5 @@
 <?php
+require_once 'error_handler.php';
 
 class Geo {
 
@@ -12,10 +13,9 @@ class Geo {
 
         if($resposta == "km3"){
              $_SESSION['pontos'] += 10;
-            header("Location:../trail5.html");
-            exit; 
+             ErrorHandler::redirectToNext("../trail5.html");
         }else{
-            echo "Resposta incorreta";
+            ErrorHandler::showError("Resposta incorreta! Lembre-se da escala do mapa.", "geo.html", "Tentar novamente");
         }
     }
 }

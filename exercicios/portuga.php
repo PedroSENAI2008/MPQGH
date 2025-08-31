@@ -1,4 +1,5 @@
 <?php
+require_once 'error_handler.php';
 
 class Portugues {
 
@@ -13,10 +14,9 @@ class Portugues {
 
         if($resposta == "c"){
             $_SESSION['pontos'] += 10;
-        header("Location:../trail3.html");
-            exit; 
+            ErrorHandler::redirectToNext("../trail3.html");
         }else{
-            echo "Resposta incorreta";
+            ErrorHandler::showError("Resposta incorreta! Verifique a ortografia das palavras.", "portuga.html", "Tentar novamente");
         }
     }
 }

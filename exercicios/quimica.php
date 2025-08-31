@@ -1,4 +1,5 @@
 <?php
+require_once 'error_handler.php';
 
 class Quimica {
 
@@ -13,10 +14,9 @@ class Quimica {
 
         if($resposta == "h4"){
             $_SESSION['pontos'] += 10;
-       header("Location:../trail4.html");
-            exit; 
+            ErrorHandler::redirectToNext("../trail4.html");
         }else{
-            echo "Resposta incorreta";
+            ErrorHandler::showError("Resposta incorreta! Revise a fórmula molecular da água.", "quimica.html", "Tentar novamente");
         }
     }
 }

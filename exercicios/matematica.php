@@ -1,10 +1,8 @@
 <?php
+require_once 'error_handler.php';
 
 class Matematica
 {
-
-
-
     public function Resposta2($resposta)
     {
         session_start();
@@ -16,10 +14,9 @@ class Matematica
 
         if ($resposta == 48) {
             $_SESSION['pontos'] += 10;
-             header("Location:../trail2.html");
-            exit; 
+            ErrorHandler::redirectToNext("../trail2.html");
         } else {
-            echo "Resposta incorreta";
+            ErrorHandler::showError("Sua resposta está incorreta. Tente novamente!", "matematica.html", "Tentar novamente");
         }
     }
 }
