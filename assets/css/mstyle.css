@@ -22,7 +22,7 @@ body{
     text-decoration: none;
     background-color: rgb(169, 141, 141);
     border-radius: 10px;
-    box-shadow: 10px 10px 30px rgb(158, 157, 157);
+    box-shadow: 10px 30px 10px  box-shadow: 10px 10px 30px rgb(158, 157, 157);
 }
 .help{
     max-width: 10vw;
@@ -143,10 +143,4 @@ h1{
     width: 20vw;           /* ocupa toda a linha */
     justify-content: flex-start; /* organiza conteúdo à esquerda */
   }
-}
-a{
-  color:white;
-  text-decoration: none;
-  font-size: large;
-
 }

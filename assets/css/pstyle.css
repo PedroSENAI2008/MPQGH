@@ -101,7 +101,6 @@ h1{
  accent-color: rgb(140, 164, 140);
  height:3vh;
  width:3vw;
- 
 }
 .submit{
   margin:0 auto;
@@ -140,10 +139,4 @@ h1{
     width: 20vw;           /* ocupa toda a linha */
     justify-content: flex-start; /* organiza conteúdo à esquerda */
   }
-}
-a{
-  color:white;
-  text-decoration: none;
-  font-size: large;
-
 }

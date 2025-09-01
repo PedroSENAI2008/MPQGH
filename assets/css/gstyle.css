@@ -8,7 +8,7 @@
 body{
     margin:0 auto;
     padding:0;
-    background-color: rgba(49, 48, 46, 0.658);
+    background-color: rgba(204, 198, 185, 0.658);
 }
 .back{
   
@@ -142,10 +142,4 @@ h1{
     width: 20vw;           /* ocupa toda a linha */
     justify-content: flex-start; /* organiza conteúdo à esquerda */
   }
-}
-a{
-  color:white;
-  text-decoration: none;
-  font-size: large;
-
 }

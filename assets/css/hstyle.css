@@ -140,9 +140,3 @@ h1{
     justify-content: flex-start; /* organiza conteúdo à esquerda */
   }
 }
-a{
-  color:white;
-  text-decoration: none;
-  font-size: large;
-
-}
