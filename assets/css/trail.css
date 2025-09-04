@@ -1,36 +1,86 @@
-*{
-    margin:0 auto;
-    padding:0;
-    font-family: 'Segoe UI';
-    font-weight: 500;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
 }
 
-.trail{
-    margin:0 auto;
-    padding:0;
-    max-width:18vw;
-    height:4vw;
-    max-height:20vw;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 1px 1px 15px 1px black;
-        display: flex;
-    align-items: center;
-    
-
-}
-p{
-    margin-left: 0;
-    padding:0 auto;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
 
-.trail a img{
-    margin-left: 0;
-    padding:0;
-    flex-direction: row;
-    justify-content: flex-start;
-    image-rendering: pixelated;
-    width: 4vw;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
+ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.trail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 60px;
+  text-decoration: none;
+  color: #fff;
+  background: #525355;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+}
+
+.trail:hover {
+  background: #2ca159;
+  transform: translateY(-3px);
+}
+
+/* imagem centralizada e invisível inicialmente */
+#imagem-hover {
+  max-width: 30vw;
+  height: 30vh;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  margin-top: 20px;
+}
+
+/* responsividade simples */
+@media (max-width: 500px) {
+  .trail {
+    width: 140px;
+    font-size: 1rem;
+  }
+  #imagem-hover {
+    max-width: 90vw;
+  }
+}
+/* Links com href */
+a[href].trail:hover {
+  background: #2ca159; /* verde */
+  transform: translateY(-3px);
+}
+
+/* Links sem href */
+.trail:hover:not(a[href]) {
+  background: #a12c2c; /* vermelho */
+  transform: translateY(-3px);
+}
+
+/* Imagem centralizada e invisível inicialmente */
+#imagem-hover {
+  max-height:30vh;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  margin-top: 20px;
 }

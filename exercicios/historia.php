@@ -1,13 +1,21 @@
 <?php
+require_once 'error_handler.php';
 
 class Historia {
 
     public function Resposta1($resposta){
+        session_start();
+
+        // Inicia pontuação e tentativas se ainda não existir
+        if (!isset($_SESSION['pontos'])) {
+            $_SESSION['pontos'] = 0;
+        }
 
         if($resposta == "vc"){
-        echo "Certa resposta";
+             $_SESSION['pontos'] += 10;
+             ErrorHandler::redirectToNext("fim.php");
         }else{
-            echo "Resposta incorreta";
+            ErrorHandler::showError("Resposta incorreta! Revise os fatos históricos sobre a chegada de Pedro Álvares Cabral.", "historia.html", "Tentar novamente");
         }
     }
 }

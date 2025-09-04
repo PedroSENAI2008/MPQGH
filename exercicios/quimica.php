@@ -1,13 +1,22 @@
 <?php
+require_once 'error_handler.php';
 
 class Quimica {
 
     public function Resposta5($resposta){
 
+        session_start();
+
+        // Inicia pontuação e tentativas se ainda não existir
+        if (!isset($_SESSION['pontos'])) {
+            $_SESSION['pontos'] = 0;
+        }
+
         if($resposta == "h4"){
-        echo "Certa resposta";
+            $_SESSION['pontos'] += 10;
+            ErrorHandler::redirectToNext("../trail4.html");
         }else{
-            echo "Resposta incorreta";
+            ErrorHandler::showError("Resposta incorreta! Revise a fórmula molecular da água.", "quimica.html", "Tentar novamente");
         }
     }
 }

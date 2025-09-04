@@ -1,13 +1,22 @@
 <?php
+require_once 'error_handler.php';
 
 class Portugues {
 
     public function Resposta4($resposta){
 
+        session_start();
+
+        // Inicia pontuação e tentativas se ainda não existir
+        if (!isset($_SESSION['pontos'])) {
+            $_SESSION['pontos'] = 0;
+        }
+
         if($resposta == "c"){
-        echo "Certa resposta";
+            $_SESSION['pontos'] += 10;
+            ErrorHandler::redirectToNext("../trail3.html");
         }else{
-            echo "Resposta incorreta";
+            ErrorHandler::showError("Resposta incorreta! Verifique a ortografia das palavras.", "portuga.html", "Tentar novamente");
         }
     }
 }
